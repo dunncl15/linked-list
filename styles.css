@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  background-color: #cfd8dc;
 }
 
 /* Header Section */
@@ -12,6 +13,7 @@ body {
 .header {
   background-color: #455a64;
   padding: 20px 0;
+  height: 40%;
 }
 h1 {
   /*font-weight: 800;*/
@@ -28,9 +30,9 @@ h1 {
 
 .input-all {
   display: block;
-  width: 90%;
   margin: 10px auto;
   padding: 5px;
+  width: 90%;
 }
 
 .input-all[placeholder] {
@@ -39,15 +41,21 @@ h1 {
 
 .enter-btn {
   display: block;
-  width: 90%;
-  background-color: #ffc107;
-  color: #fff;
-  font-size: 16pt;
-  font-weight: 800;
-  text-align: center;
   margin: 0 auto;
   padding: 5px;
+  width: 90%;
+  background-color: #ffc107;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14pt;
+  font-weight: 600;
+  letter-spacing: 1pt;
+  text-align: center;
+}
 
+.enter-btn:hover {
+  background-color: #ffd773;
 }
 
 /* Bookmark Section */
@@ -55,7 +63,7 @@ h1 {
 .bookmark-section {
   padding: 10px;
   background-color: #cfd8dc;
-  height: 300px;
+  height: auto;
 }
 
 .bookmark {
