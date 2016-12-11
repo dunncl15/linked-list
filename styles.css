@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  background-color: #455a64;
+  padding: 20px 0;
+}
+h1 {
+  /*font-weight: 800;*/
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.logo {
+  height: 28px;
+  vertical-align: middle;
+}
+
+.input-all {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.input-all[placeholder] {
+  font-size: 15pt;
+}
+
+.enter-btn {
+  display: block;
+  width: 90%;
+  background-color: #ffc107;
+  color: #fff;
+  font-size: 16pt;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+
+}
+
+div {
+  background-color: #cfd8dc;
+}
