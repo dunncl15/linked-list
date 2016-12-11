@@ -3,6 +3,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
+/* Header Section */
+
 .header {
   background-color: #455a64;
   padding: 20px 0;
@@ -44,6 +50,54 @@ h1 {
 
 }
 
-div {
+/* Bookmark Section */
+
+.bookmark-section {
+  padding: 10px;
   background-color: #cfd8dc;
+  height: 300px;
+}
+
+.bookmark {
+  margin: 10px 3px;
+  padding: 5px;
+  background-color: #fff;
+  border: 2px solid #607d8b;
+}
+
+.website-title,
+.website-url {
+  border-bottom: 2px solid #cfd8dc;
+  vertical-align: middle;
+
+}
+
+.website-title {
+  padding: 5px;
+  margin: 0;
+  font-size: 16pt;
+  font-weight: 600;
+  color: #455a64;
+  letter-spacing: 1pt;
+}
+
+.website-url {
+  padding: 10px 5px;
+  display: block;
+  color: #607d8b;
+  font-size: 14pt;
+  text-decoration: none;
+}
+
+.read-btn,
+.delete-btn {
+  margin-top: 10px;
+  border-style: none;
+  background-color: #fff;
+  color: #455a64;
+  font-size: 12pt;
+}
+
+.delete-btn {
+  float: right;
 }
