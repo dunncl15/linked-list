@@ -52,6 +52,7 @@ input[placeholder] {
   font-size: 14pt;
   font-weight: 600;
   letter-spacing: 1pt;
+  outline: none;
   text-align: center;
 }
 
@@ -107,6 +108,8 @@ input[placeholder] {
   color: #455a64;
   cursor: pointer;
   font-size: 12pt;
+  border-bottom: 1px solid #cfd8dc;
+  outline: none;
 }
 
 .delete-btn {
