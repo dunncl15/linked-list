@@ -1,42 +1,35 @@
-var webTitle = document.querySelector('.web-title')
-var webUrl = document.querySelector('.web-url')
+// var webTitle = document.querySelector('.web-title');
+// var webUrl = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
-var userEntry = [];
+var websiteTitle = document.querySelector('.websiteTitle');
+var websiteURL = document.querySelector('.websiteURL');
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
-    getUserInput();
     newBox();
+    getUserInput();
     popNewBox();
-    // addBookMark();
     console.log('addbookmark');
 });
 
 function getUserInput() {
-  userTitleInput = document.querySelector('.web-title').value;
-  userURLInput = document.querySelector('.web-url').value;
-  userEntry = [userTitleInput, userURLInput];
+  var userTitleInput = document.querySelector('.web-title').value;
+  var userURLInput = document.querySelector('.web-url').value;
   console.log(userTitleInput, userURLInput)
 };
 
-function newBox() {
-var cloneBox = document.getElementsByTagName('div')[0];
-var clone= cloneBox.cloneNode(true);
-var section1 = document.getElementsByTagName('section')[1];
-section1.appendChild(clone);
+function popNewBox() {
+  webTitle = document.querySelector('.web-title');
+  webUrl = document.querySelector('.web-url');
+  websiteTitle.innerText = webTitle;
+  websiteURL.innerText = webUrl;
 }
 
-// function popNewBox() {
-//   nodeCopy.websiteTitle = websiteTitle+i;
-//   nodeCopy.websiteURL = websiteURL+i;
-//   websiteTitle.innerText = userTitleInput;
-//   websiteURL.innerText = userURLInput;
-// }
+function newBox() {
+  var cloneBox = document.getElementsByTagName('div')[0];
+  var clone = cloneBox.cloneNode(true);
+  var section1 = document.getElementsByTagName('section')[1];
+  section1.appendChild(clone);
+}
 
-// Use this nwMark() for populating new bookmark box
-// function newMark(webName, urlLocate, read, dlt) {
-//   this.webName = web-title();
-//   this.urlLocate = ;
-//   this.read = ;
-//   this.dlt = ;
-// }
+//can I populate the form before cloning it?
