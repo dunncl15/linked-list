@@ -1,17 +1,23 @@
 var userWebsiteTitle = document.querySelector('.web-title');
 var userWebsiteURL = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
+var userTitleInput;
+var userURLInput;
 var newDiv;
 var newTitle;
+var position;
 var userEntry = [];
 var newLink;
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
     getUserInput();
-    // addBookMark();
-    console.log('addbookmark');
+    addDiv();
+    addTitle();
+    addLink();
 });
+
+//Functions
 
 function getUserInput() {
   var userTitleInput = userWebsiteTitle.value;
@@ -22,13 +28,15 @@ function getUserInput() {
 function addDiv() {
   newDiv = document.createElement('div');
   newDiv.classList.add('bookmark');
-  document.body.appendChild(newDiv);
+  position = document.getElementsByTagName('section')[1];
+  position.appendChild(newDiv);
 }
 
-function addTitle () {
+function addTitle() {
   newTitle = document.createElement('p');
   newTitle.classList.add('website-title');
   var userTitle = document.createTextNode(userEntry[0]);
+  newTitle.appendChild(userTitle);
   newDiv.appendChild(newTitle);
 }
 
@@ -36,15 +44,6 @@ function addLink () {
   newLink = document.createElement('a');
   newLink.classList.add('website-url');
   var userLink = document.createTextNode(userEntry[1]);
+  newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
 }
-
-
-
-//Use this nwMark() for populating new bookmark box
-// function newMark(webName, urlLocate, read, dlt) {
-//   this.webName = ;
-//   this.urlLocate = ;
-//   this.read = ;
-//   this.dlt = ;
-// }
