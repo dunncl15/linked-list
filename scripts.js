@@ -15,6 +15,7 @@ enterButton.addEventListener('click', function(){
     addDiv();
     addTitle();
     addLink();
+    addReadBtn();
 });
 
 //Functions
@@ -40,10 +41,18 @@ function addTitle() {
   newDiv.appendChild(newTitle);
 }
 
-function addLink () {
+function addLink() {
   newLink = document.createElement('a');
   newLink.classList.add('website-url');
   var userLink = document.createTextNode(userEntry[1]);
   newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
+}
+
+function addReadBtn() {
+  newReadBtn = document.createElement('button');
+  newReadBtn.classList.add('read-btn');
+  var btnText = document.createTextNode('Read');
+  newReadBtn.appendChild(btnText);
+  newDiv.appendChild(newReadBtn);
 }
