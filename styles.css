@@ -1,25 +1,26 @@
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   margin: 0;
   background-color: #cfd8dc;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Header Section */
+/******** Header Section ********/
 
 .header {
-  background-color: #455a64;
   padding: 20px 0;
+  background-color: #455a64;
   height: 40%;
 }
+
 h1 {
+  margin: 0;
   color: #fff;
   font-size: 30px;
   text-align: center;
-  margin: 0;
 }
 
 .logo {
@@ -27,14 +28,15 @@ h1 {
   vertical-align: middle;
 }
 
-.input-all {
+.web-title,
+.web-url {
   display: block;
   margin: 10px auto;
   padding: 5px;
   width: 90%;
 }
 
-.input-all[placeholder] {
+input[placeholder] {
   font-size: 15pt;
 }
 
@@ -57,7 +59,7 @@ h1 {
   background-color: #ffd773;
 }
 
-/* Bookmark Section */
+/******* Bookmark Section ******/
 
 .bookmark-section {
   padding: 10px;
@@ -76,7 +78,6 @@ h1 {
 .website-url {
   border-bottom: 2px solid #cfd8dc;
   vertical-align: middle;
-
 }
 
 .website-title {
@@ -102,6 +103,7 @@ h1 {
   border-style: none;
   background-color: #fff;
   color: #455a64;
+  cursor: pointer;
   font-size: 12pt;
 }
 
