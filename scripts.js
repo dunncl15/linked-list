@@ -9,6 +9,7 @@ var newLink;
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
     getUserInput();
+    newBox();
     // addBookMark();
     console.log('addbookmark');
 });
@@ -39,7 +40,12 @@ function addLink () {
   newDiv.appendChild(newLink);
 }
 
-
+function newBox() {
+var cloneBox = document.getElementsByTagName('div')[0];
+var clone= cloneBox.cloneNode(true);
+var section1 = document.getElementsByTagName('section')[1];
+section1.appendChild(clone);
+}
 
 //Use this nwMark() for populating new bookmark box
 // function newMark(webName, urlLocate, read, dlt) {
