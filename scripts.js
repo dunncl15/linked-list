@@ -11,14 +11,19 @@ var newLink;
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
-    getUserInput();
-    addDiv();
-    addTitle();
-    addLink();
-    addReadBtn();
+    addBookmark();
 });
 
 //Functions
+
+function addBookmark() {
+  getUserInput();
+  addDiv();
+  addTitle();
+  addLink();
+  addReadBtn();
+  addDeleteBtn();
+}
 
 function getUserInput() {
   var userTitleInput = userWebsiteTitle.value;
@@ -47,6 +52,10 @@ function addLink() {
   var userLink = document.createTextNode(userEntry[1]);
   newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
+
+  var newHref = document.createAttribute('href')
+  newHref.value = userEntry[1];
+  newLink.setAttributeNode(newHref);
 }
 
 function addReadBtn() {
@@ -55,4 +64,12 @@ function addReadBtn() {
   var btnText = document.createTextNode('Read');
   newReadBtn.appendChild(btnText);
   newDiv.appendChild(newReadBtn);
+}
+
+function addDeleteBtn() {
+  newDeleteBtn = document.createElement('button');
+  newDeleteBtn.classList.add('delete-btn');
+  var btnText = document.createTextNode('Delete');
+  newDeleteBtn.appendChild(btnText);
+  newDiv.appendChild(newDeleteBtn);
 }
