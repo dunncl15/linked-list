@@ -25,3 +25,18 @@ function newBox() {
   var section1 = document.getElementsByTagName('section')[1];
   section1.appendChild(clone);
 }
+
+
+// function addLink() {
+//   newLink = document.createElement('a');
+//   newLink.classList.add('website-url');
+//   var userLink = document.createTextNode(userEntry[1]);
+//   newLink.appendChild(userLink);
+//   newDiv.appendChild(newLink);
+//   var newHref = document.createAttribute('href')
+//   newHref.value = 'http://' + userEntry[1];
+//   newLink.setAttributeNode(newHref);
+//   var newTab = document.createAttribute('target');
+//   newTab.value = document.createTextNode('_blank');
+//   newLink.setAttributeNode(newTab);
+// }
