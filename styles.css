@@ -73,14 +73,14 @@ h1 {
   border: 2px solid #607d8b;
 }
 
-.website-title,
-.website-url {
+.websiteTitle,
+.website-URL {
   border-bottom: 2px solid #cfd8dc;
   vertical-align: middle;
 
 }
 
-.website-title {
+.websiteTitle {
   padding: 5px;
   margin: 0;
   font-size: 16pt;
@@ -89,7 +89,7 @@ h1 {
   letter-spacing: 1pt;
 }
 
-.website-url {
+.websiteURL {
   padding: 10px 5px;
   display: block;
   color: #607d8b;

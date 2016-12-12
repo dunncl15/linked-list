@@ -1,44 +1,23 @@
-var userWebsiteTitle = document.querySelector('.web-title');
-var userWebsiteURL = document.querySelector('.web-url');
+var webTitle = document.querySelector('.web-title')
+var webUrl = document.querySelector('.web-url')
 var enterButton = document.querySelector('.enter-btn');
-var newDiv;
-var newTitle;
 var userEntry = [];
-var newLink;
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
     getUserInput();
     newBox();
+    popNewBox();
     // addBookMark();
     console.log('addbookmark');
 });
 
 function getUserInput() {
-  var userTitleInput = userWebsiteTitle.value;
-  var userURLInput = userWebsiteURL.value;
+  userTitleInput = document.querySelector('.web-title').value;
+  userURLInput = document.querySelector('.web-url').value;
   userEntry = [userTitleInput, userURLInput];
+  console.log(userTitleInput, userURLInput)
 };
-
-function addDiv() {
-  newDiv = document.createElement('div');
-  newDiv.classList.add('bookmark');
-  document.body.appendChild(newDiv);
-}
-
-function addTitle () {
-  newTitle = document.createElement('p');
-  newTitle.classList.add('website-title');
-  var userTitle = document.createTextNode(userEntry[0]);
-  newDiv.appendChild(newTitle);
-}
-
-function addLink () {
-  newLink = document.createElement('a');
-  newLink.classList.add('website-url');
-  var userLink = document.createTextNode(userEntry[1]);
-  newDiv.appendChild(newLink);
-}
 
 function newBox() {
 var cloneBox = document.getElementsByTagName('div')[0];
@@ -47,9 +26,16 @@ var section1 = document.getElementsByTagName('section')[1];
 section1.appendChild(clone);
 }
 
-//Use this nwMark() for populating new bookmark box
+// function popNewBox() {
+//   nodeCopy.websiteTitle = websiteTitle+i;
+//   nodeCopy.websiteURL = websiteURL+i;
+//   websiteTitle.innerText = userTitleInput;
+//   websiteURL.innerText = userURLInput;
+// }
+
+// Use this nwMark() for populating new bookmark box
 // function newMark(webName, urlLocate, read, dlt) {
-//   this.webName = ;
+//   this.webName = web-title();
 //   this.urlLocate = ;
 //   this.read = ;
 //   this.dlt = ;
