@@ -1,29 +1,24 @@
-// var webTitle = document.querySelector('.web-title');
-// var webUrl = document.querySelector('.web-url');
+var userTitleInput = document.querySelector('.web-title');
+var userURLInput = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
 var websiteTitle = document.querySelector('.websiteTitle');
 var websiteURL = document.querySelector('.websiteURL');
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
+    var userTitleInputValue = userTitleInput.value;
+    var userURLInputValue = userURLInput.value;
     newBox();
-    getUserInput();
-    popNewBox();
+    getUserInput(userTitleInputValue, userURLInputValue);
     console.log('addbookmark');
+    document.querySelector('.bookmark').style.display = 'block';
 });
 
-function getUserInput() {
-  var userTitleInput = document.querySelector('.web-title').value;
-  var userURLInput = document.querySelector('.web-url').value;
-  console.log(userTitleInput, userURLInput)
+function getUserInput(titleInOne, urlOne) {
+  websiteTitle.innerText = titleInOne;
+  websiteURL.innerText = urlOne;
+  console.log(titleInOne, urlOne);
 };
-
-function popNewBox() {
-  webTitle = document.querySelector('.web-title');
-  webUrl = document.querySelector('.web-url');
-  websiteTitle.innerText = webTitle;
-  websiteURL.innerText = webUrl;
-}
 
 function newBox() {
   var cloneBox = document.getElementsByTagName('div')[0];
