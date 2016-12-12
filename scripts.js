@@ -11,13 +11,20 @@ var newLink;
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
+  getUserInput();
+  if (userEntry[0] === "" && userEntry[1] === ""){
+    alert("Enter a website title and valid url.");
+  } else if (userEntry[0] === "") {
+    alert("Enter a website title.");
+  } else if (userEntry[1] === "") {
+    alert("Enter a valid url.");
+  } else
     addBookmark();
 });
 
 //Functions
 
 function addBookmark() {
-  getUserInput();
   addDiv();
   addTitle();
   addLink();
