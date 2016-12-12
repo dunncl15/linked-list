@@ -54,8 +54,12 @@ function addLink() {
   newDiv.appendChild(newLink);
 
   var newHref = document.createAttribute('href')
-  newHref.value = userEntry[1];
+  newHref.value = 'http://' + userEntry[1];
   newLink.setAttributeNode(newHref);
+
+  var newTab = document.createAttribute('target');
+  newTab.value = document.createTextNode('_blank');
+  newLink.setAttributeNode(newTab);
 }
 
 function addReadBtn() {
