@@ -6,18 +6,18 @@ var websiteURL = document.querySelector('.websiteURL');
 
 //Enter Button click event//
 enterButton.addEventListener('click', function(){
-    var userTitleInputValue = userTitleInput.value;
-    var userURLInputValue = userURLInput.value;
-    newBox();
-    getUserInput(userTitleInputValue, userURLInputValue);
-    console.log('addbookmark');
-    document.querySelector('.bookmark').style.display = 'block';
+  var userTitleInputValue = userTitleInput.value;
+  var userURLInputValue = userURLInput.value;
+  //newbox() MUST fire before newBox()
+  newBox();
+  getUserInput(userTitleInputValue, userURLInputValue);
+  console.log('addbookmark');
+  document.querySelector('.bookmark').style.display = 'block';
 });
 
 function getUserInput(titleInOne, urlOne) {
   websiteTitle.innerText = titleInOne;
   websiteURL.innerText = urlOne;
-  console.log(titleInOne, urlOne);
 };
 
 function newBox() {
@@ -28,3 +28,4 @@ function newBox() {
 }
 
 //can I populate the form before cloning it?
+//YES! You Can!
