@@ -9,7 +9,7 @@ var position;
 var userEntry = [];
 var newLink;
 
-//Enter Button click event//
+//Enter Button click event
 enterButton.addEventListener('click', function(){
   getUserInput();
   if (userEntry[0] === "" && userEntry[1] === ""){
@@ -19,7 +19,7 @@ enterButton.addEventListener('click', function(){
   } else if (userEntry[1] === "") {
     alert("Enter a valid url.");
   } else
-    addBookmark();
+  addBookmark();
 });
 
 //Functions
