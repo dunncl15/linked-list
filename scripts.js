@@ -29,10 +29,20 @@ enterButton.addEventListener('click', function(){
   }
 });
 
-//Delete Button click event
-bookmarkSection.addEventListener('click', function() {
+//Read Button click event
+bookmarkSection.addEventListener('click', function(e) {
   var bookmark = document.querySelector('.bookmark');
-  bookmark.parentNode.removeChild(bookmark);
+  if (e.target && e.target.innerText === "Read") {
+    bookmark.classList.toggle('read');
+  }
+})
+
+//Delete Button click event
+bookmarkSection.addEventListener('click', function(e) {
+  var bookmark = document.querySelector('.bookmark');
+  if (e.target && e.target.innerText === "Delete") {
+    bookmark.parentNode.removeChild(bookmark);
+  }
 });
 
 //FUNCTIONS
