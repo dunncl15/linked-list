@@ -25,7 +25,7 @@ function newBox() {
   var section1 = document.getElementsByTagName('section')[1];
   section1.appendChild(clone);
   readClassList();
-  document.getElementsByTagName('href') = 'http://' + websiteURL[0];
+  // document.getElementsByTagName('href') = 'http://' + websiteURL[0];
 }
 
 function readClassList() {
