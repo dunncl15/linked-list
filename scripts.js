@@ -9,9 +9,9 @@ enterButton.addEventListener('click', function(){
   var userURLInputValue = userURLInput.value;
   //newbox() MUST fire before newBox()
   newBox();
-  getUserInput(userTitleInputValue, userURLInputValue);
-  console.log('addbookmark');
+  getUserInput(userTitleInputValue, userURLInputValue)
   document.querySelector('.bookmark').style.display = 'block';
+
 });
 
 function getUserInput(titleInOne, urlOne) {
@@ -25,6 +25,7 @@ function newBox() {
   var section1 = document.getElementsByTagName('section')[1];
   section1.appendChild(clone);
   readClassList();
+  document.getElementsByTagName('href') = 'http://' + websiteURL[0];
 }
 
 function readClassList() {
@@ -32,16 +33,16 @@ function readClassList() {
   element.classList.add("read");
 }
 
-function addLink() {
-  newLink = document.createElement('a');
-  newLink.classList.add('website-url');
-  var userLink = document.createTextNode(userEntry[1]);
-  newLink.appendChild(userLink);
-  newDiv.appendChild(newLink);
-  var newHref = document.createAttribute('href')
-  newHref.value = 'http://' + userEntry[1];
-  newLink.setAttributeNode(newHref);
-  var newTab = document.createAttribute('target');
-  newTab.value = document.createTextNode('_blank');
-  newLink.setAttributeNode(newTab);
-}
+// function addLink() {
+//   newLink = document.createElement('a');
+//   newLink.classList.add('website-url');
+//   var userLink = document.createTextNode(userEntry[1]);
+//   newLink.appendChild(userLink);
+//   newDiv.appendChild(newLink);
+//   var newHref = document.createAttribute('href')
+//   newHref.value = 'http://' + userEntry[1];
+//   newLink.setAttributeNode(newHref);
+//   var newTab = document.createAttribute('target');
+//   newTab.value = document.createTextNode('_blank');
+//   newLink.setAttributeNode(newTab);
+// }
