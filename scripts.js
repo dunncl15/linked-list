@@ -14,7 +14,8 @@ var newLink;
 //EVENT LISTENERS
 
 //Enter Button click event
-enterButton.addEventListener('click', function(){
+enterButton.addEventListener('click', function(e){
+  e.preventDefault();
   getUserInput();
   if (userEntry[0] === "" && userEntry[1] === ""){
     alert("Enter a website title and valid url (www.example.com).");
@@ -31,17 +32,17 @@ enterButton.addEventListener('click', function(){
 
 //Read Button click event
 bookmarkSection.addEventListener('click', function(e) {
-  var bookmark = document.querySelector('.bookmark');
+  var bookmarkCard = document.querySelector('.bookmark');
   if (e.target && e.target.innerText === "Read") {
-    bookmark.classList.toggle('read');
+   bookmarkCard.classList.toggle('read');
   }
-})
+});
 
 //Delete Button click event
 bookmarkSection.addEventListener('click', function(e) {
-  var bookmark = document.querySelector('.bookmark');
+  var bookmarkCard = document.querySelector('.bookmark');
   if (e.target && e.target.innerText === "Delete") {
-    bookmark.parentNode.removeChild(bookmark);
+   bookmarkCard.parentNode.removeChild(bookmarkCard);
   }
 });
 
@@ -82,11 +83,9 @@ function addLink() {
   var userLink = document.createTextNode(userEntry[1]);
   newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
-
   var newHref = document.createAttribute('href')
   newHref.value = 'http://' + userEntry[1];
   newLink.setAttributeNode(newHref);
-
   var newTab = document.createAttribute('target');
   newTab.value = document.createTextNode('_blank');
   newLink.setAttributeNode(newTab);

@@ -41,7 +41,7 @@ h1 {
 }
 
 input {
-  outline-color: #cfd8dc;
+  outline-color: #CFD8DC;
   color: #455A64;
 }
 
@@ -102,6 +102,10 @@ input[placeholder] {
   background-color: #F2F4F4;
 }
 
+.read .delete-btn:hover {
+  border-bottom: none;
+}
+
 .website-title,
 .website-url {
   border-bottom: 2px solid #cfd8dc;
@@ -127,7 +131,7 @@ input[placeholder] {
 
 .website-url:hover {
   color: #455A64;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .read-btn,
@@ -166,7 +170,6 @@ input[placeholder] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5em 0;
     height: 100vh;
     width: 50%;
   }
