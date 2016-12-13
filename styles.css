@@ -7,6 +7,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 /******** Header Section ********/
 
 .header {
@@ -137,8 +142,21 @@ input[placeholder] {
 
 @media screen and (min-width: 600px) {
 
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
   .header {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 0;
+    height: 100vh;
+    width: 50%;
+  }
+
+  .bookmark-section {
     height: 100vh;
     width: 50%;
   }
@@ -155,16 +173,6 @@ input[placeholder] {
   .web-title,
   .web-url {
     margin: 2em auto;
-  }
-
-  .enter-btn {
-    margin: 2em auto;
-  }
-
-  .bookmark-section {
-    float: right;
-    height: 100vh;
-    width: 50%;
   }
 
   .clearfix:after {
