@@ -1,7 +1,7 @@
+//GLOBAL VARIABLES
 var userWebsiteTitle = document.querySelector('.web-title');
 var userWebsiteURL = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
-var deleteButton = document.querySelector('.delete-btn');
 var bookmarkSection = document.querySelector('.bookmark-section');
 var userTitleInput;
 var userURLInput;
@@ -10,6 +10,8 @@ var newTitle;
 var position;
 var userEntry = [];
 var newLink;
+
+//EVENT LISTENERS
 
 //Enter Button click event
 enterButton.addEventListener('click', function(){
@@ -30,8 +32,7 @@ bookmarkSection.addEventListener('click', function() {
   bookmark.parentNode.removeChild(bookmark);
 });
 
-
-//Functions
+//FUNCTIONS
 
 function addBookmark() {
   addDiv();
