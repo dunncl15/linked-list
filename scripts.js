@@ -46,6 +46,7 @@ function addBookmark() {
 function addDiv() {
   newDiv = document.createElement('div');
   newDiv.classList.add('bookmark');
+  newDiv.classList.add('read');
   position = document.getElementsByTagName('section')[1];
   position.appendChild(newDiv);
 }
