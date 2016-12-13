@@ -8,6 +8,7 @@ var newTitle;
 var position;
 var userEntry = [];
 var newLink;
+// var readStatus = document.createElement(.read);
 
 //Enter Button click event
 enterButton.addEventListener('click', function(){
@@ -19,8 +20,15 @@ enterButton.addEventListener('click', function(){
   } else if (userEntry[1] === "") {
     alert("Enter a valid url.");
   } else
-  addBookmark();
+    addBookmark();
 });
+
+//db Functions
+
+function readClassList() {
+  var element = document.getElementById("dog-fart");
+  element.classList.add("read");
+}
 
 //Functions
 
@@ -30,6 +38,7 @@ function addBookmark() {
   addLink();
   addReadBtn();
   addDeleteBtn();
+  readClassList();
 }
 
 function getUserInput() {
