@@ -37,11 +37,13 @@ h1 {
 
 input {
   outline-color: #cfd8dc;
+  color: #B9BBBD;
 }
 
 input[placeholder] {
   font-size: 15pt;
   letter-spacing: 1pt;
+  color: #455A64;
 }
 
 .enter-btn {
@@ -104,15 +106,21 @@ input[placeholder] {
   text-decoration: none;
 }
 
+.website-url:hover {
+  color: #455A64;
+  font-weight: 600;
+}
+
 .read-btn,
 .delete-btn {
   margin-top: 10px;
+  padding: 3px 0;
   border-style: none;
   background-color: #fff;
   color: #455a64;
   cursor: pointer;
-  font-size: 12pt;
-  border-bottom: 1px solid #cfd8dc;
+  font-size: 14px;
+  border-bottom: 1px solid #F2F4F4;
   outline: none;
 }
 
@@ -122,7 +130,7 @@ input[placeholder] {
 
 .read-btn:hover,
 .delete-btn:hover {
-  border-bottom: 1px solid #ffc107;
+  border-bottom: 2px solid #FFC107;
   color: #455A64;
   font-weight: 500;
 }
