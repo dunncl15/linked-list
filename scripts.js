@@ -1,6 +1,8 @@
+//GLOBAL VARIABLES
 var userWebsiteTitle = document.querySelector('.web-title');
 var userWebsiteURL = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
+var bookmarkSection = document.querySelector('.bookmark-section');
 var userTitleInput;
 var userURLInput;
 var newDiv;
@@ -9,20 +11,40 @@ var position;
 var userEntry = [];
 var newLink;
 
+//EVENT LISTENERS
+
 //Enter Button click event
-enterButton.addEventListener('click', function(){
+enterButton.addEventListener('click', function(e){
+  e.preventDefault();
   getUserInput();
   if (userEntry[0] === "" && userEntry[1] === ""){
-    alert("Enter a website title and valid url.");
+    alert("Enter a website title and valid url (www.example.com).");
   } else if (userEntry[0] === "") {
     alert("Enter a website title.");
   } else if (userEntry[1] === "") {
-    alert("Enter a valid url.");
-  } else
-  addBookmark();
+    alert("Enter a valid url (www.example.com).");
+  } else {
+    addBookmark();
+    userWebsiteTitle.value = "";
+    userWebsiteURL.value = "";
+  }
 });
 
-//Functions
+//Read Button click event
+bookmarkSection.addEventListener('click', function(e) {
+  if (e.target && e.target.innerText === "Read") {
+  e.target.closest(".bookmark").classList.toggle("read");
+  }
+});
+
+//Delete Button click event
+bookmarkSection.addEventListener('click', function(e) {
+  if (e.target && e.target.innerText === "Delete") {
+  e.target.closest(".bookmark").remove();
+  }
+});
+
+//FUNCTIONS
 
 function addBookmark() {
   addDiv();
@@ -59,11 +81,9 @@ function addLink() {
   var userLink = document.createTextNode(userEntry[1]);
   newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
-
   var newHref = document.createAttribute('href')
   newHref.value = 'http://' + userEntry[1];
   newLink.setAttributeNode(newHref);
-
   var newTab = document.createAttribute('target');
   newTab.value = document.createTextNode('_blank');
   newLink.setAttributeNode(newTab);
