@@ -32,17 +32,15 @@ enterButton.addEventListener('click', function(e){
 
 //Read Button click event
 bookmarkSection.addEventListener('click', function(e) {
-  var bookmarkCard = document.querySelector('.bookmark');
   if (e.target && e.target.innerText === "Read") {
-   bookmarkCard.classList.toggle('read');
+  e.target.closest(".bookmark").classList.toggle("read");
   }
 });
 
 //Delete Button click event
 bookmarkSection.addEventListener('click', function(e) {
-  var bookmarkCard = document.querySelector('.bookmark');
   if (e.target && e.target.innerText === "Delete") {
-   bookmarkCard.parentNode.removeChild(bookmarkCard);
+  e.target.closest(".bookmark").remove();
   }
 });
 
