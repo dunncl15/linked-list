@@ -37,13 +37,12 @@ h1 {
 
 input {
   outline-color: #cfd8dc;
-  color: #B9BBBD;
+  color: #455A64;
 }
 
 input[placeholder] {
   font-size: 15pt;
   letter-spacing: 1pt;
-  color: #455A64;
 }
 
 .enter-btn {
