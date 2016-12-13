@@ -98,6 +98,10 @@ input[placeholder] {
   border-bottom: none;
 }
 
+.read .delete-btn {
+  background-color: #F2F4F4;
+}
+
 .website-title,
 .website-url {
   border-bottom: 2px solid #cfd8dc;
