@@ -17,13 +17,16 @@ var newLink;
 enterButton.addEventListener('click', function(){
   getUserInput();
   if (userEntry[0] === "" && userEntry[1] === ""){
-    alert("Enter a website title and valid url.");
+    alert("Enter a website title and valid url (www.example.com).");
   } else if (userEntry[0] === "") {
     alert("Enter a website title.");
   } else if (userEntry[1] === "") {
-    alert("Enter a valid url.");
-  } else
-  addBookmark();
+    alert("Enter a valid url (www.example.com).");
+  } else {
+    addBookmark();
+    userWebsiteTitle.value = "";
+    userWebsiteURL.value = "";
+  }
 });
 
 //Delete Button click event
