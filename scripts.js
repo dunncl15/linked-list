@@ -37,15 +37,11 @@ function addBookmark() {
   addTitle();
   addLink();
   addReadBtn();
+  getUserInput();
   addDeleteBtn();
   readClassList();
 }
 
-function getUserInput() {
-  var userTitleInput = userWebsiteTitle.value;
-  var userURLInput = userWebsiteURL.value;
-  userEntry = [userTitleInput, userURLInput];
-};
 
 function addDiv() {
   newDiv = document.createElement('div');
@@ -85,6 +81,11 @@ function addReadBtn() {
   newReadBtn.appendChild(btnText);
   newDiv.appendChild(newReadBtn);
 }
+function getUserInput() {
+  var userTitleInput = userWebsiteTitle.value;
+  var userURLInput = userWebsiteURL.value;
+  userEntry = [userTitleInput, userURLInput];
+};
 
 function addDeleteBtn() {
   newDeleteBtn = document.createElement('button');
