@@ -1,6 +1,8 @@
 var userWebsiteTitle = document.querySelector('.web-title');
 var userWebsiteURL = document.querySelector('.web-url');
 var enterButton = document.querySelector('.enter-btn');
+var deleteButton = document.querySelector('.delete-btn');
+var bookmarkSection = document.querySelector('.bookmark-section');
 var userTitleInput;
 var userURLInput;
 var newDiv;
@@ -21,6 +23,13 @@ enterButton.addEventListener('click', function(){
   } else
   addBookmark();
 });
+
+//Delete Button click event
+bookmarkSection.addEventListener('click', function() {
+  var bookmark = document.querySelector('.bookmark');
+  bookmark.parentNode.removeChild(bookmark);
+});
+
 
 //Functions
 
