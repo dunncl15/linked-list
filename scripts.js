@@ -28,9 +28,10 @@ function newBox() {
 }
 
 function readClassList() {
-  var element = document.getElementById("websiteURL");
+  var element = document.getElementById("dog-fart");
   element.classList.add("read");
 }
+
 
 
 // function addLink() {
