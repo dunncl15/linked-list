@@ -24,6 +24,12 @@ function newBox() {
   var clone = cloneBox.cloneNode(true);
   var section1 = document.getElementsByTagName('section')[1];
   section1.appendChild(clone);
+  readClassList();
+}
+
+function readClassList() {
+  var element = document.getElementById("websiteURL");
+  element.classList.add("read");
 }
 
 
