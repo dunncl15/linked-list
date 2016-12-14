@@ -104,3 +104,20 @@ function addDeleteBtn() {
   newDeleteBtn.appendChild(btnText);
   newDiv.appendChild(newDeleteBtn);
 }
+
+//Bookmark Counter
+
+function totalCount() {
+  var bookmark = document.querySelectorAll('.bookmark').length;
+  return bookmark;
+  }
+
+function readCount() {
+  var readBookmark = document.querySelectorAll('.read').length;
+  return readBookmark;
+}
+
+function unreadCount() {
+  var unread = totalCount() - readCount();
+  return unread;
+}
