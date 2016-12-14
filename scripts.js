@@ -10,6 +10,7 @@ var newTitle;
 var position;
 var userEntry = [];
 var newLink;
+var activeBtn;
 
 //EVENT LISTENERS
 
@@ -18,15 +19,13 @@ enterButton.addEventListener('click', function(e){
   e.preventDefault();
   getUserInput();
   if (userEntry[0] === "" && userEntry[1] === ""){
-    alert("Enter a website title and valid url (www.example.com).");
   } else if (userEntry[0] === "") {
-    alert("Enter a website title.");
   } else if (userEntry[1] === "") {
-    alert("Enter a valid url (www.example.com).");
   } else {
     addBookmark();
     userWebsiteTitle.value = "";
     userWebsiteURL.value = "";
+    enterButton.disabled = true;
   }
 });
 
@@ -44,7 +43,23 @@ bookmarkSection.addEventListener('click', function(e) {
   }
 });
 
+userWebsiteTitle.addEventListener('keyup', function() {
+  activeBtn();
+})
+
+userWebsiteURL.addEventListener('keyup', function() {
+  activeBtn();
+})
+
 //FUNCTIONS
+
+function activeBtn() {
+  if (userWebsiteTitle.value === "" || userWebsiteURL.value === "") {
+    enterButton.disabled = true;
+  } else {
+    enterButton.disabled = false;
+  }
+}
 
 function addBookmark() {
   addDiv();
