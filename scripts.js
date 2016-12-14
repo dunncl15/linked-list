@@ -10,23 +10,27 @@ var newTitle;
 var position;
 var userEntry = [];
 var newLink;
+var activeBtn;
 
 //EVENT LISTENERS
 
+//Input field key up events
+userWebsiteTitle.addEventListener('keyup', function() {
+  activeBtn();
+})
+userWebsiteURL.addEventListener('keyup', function() {
+  activeBtn();
+})
+
 //Enter Button click event
-enterButton.addEventListener('click', function(e){
+enterButton.addEventListener('click', function(e) {
   e.preventDefault();
   getUserInput();
-  if (userEntry[0] === "" && userEntry[1] === ""){
-    alert("Enter a website title and valid url (www.example.com).");
-  } else if (userEntry[0] === "") {
-    alert("Enter a website title.");
-  } else if (userEntry[1] === "") {
-    alert("Enter a valid url (www.example.com).");
+  if (userEntry[0] === "" || userEntry[1] === "") {
+    enterButton.disabled = true;
   } else {
+    enterButton.disabled = false;
     addBookmark();
-    userWebsiteTitle.value = "";
-    userWebsiteURL.value = "";
   }
 });
 
@@ -52,13 +56,24 @@ function addBookmark() {
   addLink();
   addReadBtn();
   addDeleteBtn();
+  userWebsiteTitle.value = "";
+  userWebsiteURL.value = "";
+  enterButton.disabled = true;
+}
+
+function activeBtn() {
+  if (userWebsiteTitle.value === "" || userWebsiteURL.value === "") {
+    enterButton.disabled = true;
+  } else {
+    enterButton.disabled = false;
+  }
 }
 
 function getUserInput() {
   var userTitleInput = userWebsiteTitle.value;
   var userURLInput = userWebsiteURL.value;
   userEntry = [userTitleInput, userURLInput];
-};
+}
 
 function addDiv() {
   newDiv = document.createElement('div');
