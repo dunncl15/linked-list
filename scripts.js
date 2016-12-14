@@ -14,18 +14,23 @@ var activeBtn;
 
 //EVENT LISTENERS
 
+//Input field key up events
+userWebsiteTitle.addEventListener('keyup', function() {
+  activeBtn();
+})
+userWebsiteURL.addEventListener('keyup', function() {
+  activeBtn();
+})
+
 //Enter Button click event
-enterButton.addEventListener('click', function(e){
+enterButton.addEventListener('click', function(e) {
   e.preventDefault();
   getUserInput();
-  if (userEntry[0] === "" && userEntry[1] === ""){
-  } else if (userEntry[0] === "") {
-  } else if (userEntry[1] === "") {
-  } else {
-    addBookmark();
-    userWebsiteTitle.value = "";
-    userWebsiteURL.value = "";
+  if (userEntry[0] === "" || userEntry[1] === "") {
     enterButton.disabled = true;
+  } else {
+    enterButton.disabled = false;
+    addBookmark();
   }
 });
 
@@ -43,15 +48,18 @@ bookmarkSection.addEventListener('click', function(e) {
   }
 });
 
-userWebsiteTitle.addEventListener('keyup', function() {
-  activeBtn();
-})
-
-userWebsiteURL.addEventListener('keyup', function() {
-  activeBtn();
-})
-
 //FUNCTIONS
+
+function addBookmark() {
+  addDiv();
+  addTitle();
+  addLink();
+  addReadBtn();
+  addDeleteBtn();
+  userWebsiteTitle.value = "";
+  userWebsiteURL.value = "";
+  enterButton.disabled = true;
+}
 
 function activeBtn() {
   if (userWebsiteTitle.value === "" || userWebsiteURL.value === "") {
@@ -61,19 +69,11 @@ function activeBtn() {
   }
 }
 
-function addBookmark() {
-  addDiv();
-  addTitle();
-  addLink();
-  addReadBtn();
-  addDeleteBtn();
-}
-
 function getUserInput() {
   var userTitleInput = userWebsiteTitle.value;
   var userURLInput = userWebsiteURL.value;
   userEntry = [userTitleInput, userURLInput];
-};
+}
 
 function addDiv() {
   newDiv = document.createElement('div');
@@ -118,21 +118,4 @@ function addDeleteBtn() {
   var btnText = document.createTextNode('Delete');
   newDeleteBtn.appendChild(btnText);
   newDiv.appendChild(newDeleteBtn);
-}
-
-//Bookmark Counter
-
-function totalCount() {
-  var bookmark = document.querySelectorAll('.bookmark').length;
-  return bookmark;
-  }
-
-function readCount() {
-  var readBookmark = document.querySelectorAll('.read').length;
-  return readBookmark;
-}
-
-function unreadCount() {
-  var unread = totalCount() - readCount();
-  return unread;
 }
