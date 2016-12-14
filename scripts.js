@@ -25,12 +25,7 @@ userWebsiteURL.addEventListener('keyup', function() {
 enterButton.addEventListener('click', function(e) {
   e.preventDefault();
   getUserInput();
-  if (userEntry[0] === "" || userEntry[1] === "") {
-    enterButton.disabled = true;
-  } else {
-    enterButton.disabled = false;
-    addBookmark();
-  }
+  addBookmark();   
 });
 
 //Read Button click event
