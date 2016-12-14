@@ -70,6 +70,11 @@ input[placeholder] {
   background-color: #ffd773;
 }
 
+.enter-btn:disabled {
+  background-color: #ffd773;
+  cursor: default;
+}
+
 /******* Bookmark Section ******/
 
 .bookmark-section {
