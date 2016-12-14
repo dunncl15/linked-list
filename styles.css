@@ -20,10 +20,10 @@ body {
   height: 40vh;
 }
 
-h1 {
-  margin: 0 0 20px 0;
+.title {
+  margin: 0 auto 20px auto;
   color: #fff;
-  font-size: 30px;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -37,7 +37,7 @@ h1 {
   display: block;
   margin: 15px auto;
   padding: 5px;
-  width: 90%;
+  width: 80%;
 }
 
 input {
@@ -50,11 +50,11 @@ input[placeholder] {
   letter-spacing: 1pt;
 }
 
-.enter-btn {
+ .enter-btn {
   display: block;
   margin: 0 auto;
   padding: 8px 0;
-  width: 90%;
+  width: 80%;
   background-color: #ffc107;
   border-style: none;
   color: #fff;
@@ -67,11 +67,11 @@ input[placeholder] {
 }
 
 .enter-btn:hover {
-  background-color: #ffd773;
+  background-color: #FFD773;
 }
 
 .enter-btn:disabled {
-  background-color: #ffd773;
+  background-color: #FFD773;
   cursor: default;
 }
 
@@ -164,7 +164,7 @@ input[placeholder] {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
 
   .wrapper {
     display: flex;
@@ -184,8 +184,9 @@ input[placeholder] {
     width: 50%;
   }
 
-  h1 {
-    font-size: 35px;
+  .title {
+    width: 95%;
+    font-size: 2.25em;
     letter-spacing: 1pt;
   }
 
