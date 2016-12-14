@@ -10,16 +10,15 @@ var newTitle;
 var position;
 var userEntry = [];
 var newLink;
-var activeBtn;
 
 //EVENT LISTENERS
 
 //Input field key up events
 userWebsiteTitle.addEventListener('keyup', function() {
-  activeBtn();
+  btnState();
 })
 userWebsiteURL.addEventListener('keyup', function() {
-  activeBtn();
+  btnState();
 })
 
 //Enter Button click event
@@ -61,7 +60,7 @@ function addBookmark() {
   enterButton.disabled = true;
 }
 
-function activeBtn() {
+function btnState() {
   if (userWebsiteTitle.value === "" || userWebsiteURL.value === "") {
     enterButton.disabled = true;
   } else {
@@ -96,9 +95,11 @@ function addLink() {
   var userLink = document.createTextNode(userEntry[1]);
   newLink.appendChild(userLink);
   newDiv.appendChild(newLink);
+
   var newHref = document.createAttribute('href')
   newHref.value = 'http://' + userEntry[1];
   newLink.setAttributeNode(newHref);
+
   var newTab = document.createAttribute('target');
   newTab.value = document.createTextNode('_blank');
   newLink.setAttributeNode(newTab);
